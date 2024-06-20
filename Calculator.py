@@ -10,8 +10,17 @@ def displ(value):
     global expression
     expression=expression+str(value)
     disp.set(expression)
+def clear():
+    global expression
+    expression=""
+    disp.set("")
 
-
+try:
+def equ():
+    global expression
+    total=str(eval(expression))
+    disp.set(total)
+    expression=""
 disp = StringVar()
 display=Entry(window,textvariable=disp,state=DISABLED).grid(columnspan=4, ipadx=97, ipady=20)
 
